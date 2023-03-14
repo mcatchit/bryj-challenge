@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name" translatable="false">BryjChallenge</string>
+    <string name="title_home" translatable="false">Home</string>
+    <string name="title_shop" translatable="false">Shop</string>
+    <string name="title_account" translatable="false">Account</string>
+    <string name="title_bag" translatable="false">Bag</string>
+</resources>

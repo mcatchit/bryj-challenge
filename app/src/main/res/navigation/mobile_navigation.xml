@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/navigation_home">
+
+    <fragment
+        android:id="@+id/navigation_home"
+        android:name="com.mariaalenskaya.bryjchallenge.ui.HomeFragment"
+        android:label="@string/title_home" />
+
+    <fragment
+        android:id="@+id/navigation_shop"
+        android:name="com.mariaalenskaya.bryjchallenge.ui.ShopFragment"
+        android:label="@string/title_shop" />
+
+    <fragment
+        android:id="@+id/navigation_account"
+        android:name="com.mariaalenskaya.bryjchallenge.ui.AccountFragment"
+        android:label="@string/title_account" />
+
+    <fragment
+        android:id="@+id/navigation_bag"
+        android:name="com.mariaalenskaya.bryjchallenge.ui.BagFragment"
+        android:label="@string/title_bag" />
+</navigation>
