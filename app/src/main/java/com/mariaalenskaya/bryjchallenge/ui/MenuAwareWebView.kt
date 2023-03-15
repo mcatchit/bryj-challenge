@@ -17,6 +17,7 @@ class MenuAwareWebView @JvmOverloads constructor(
 ) : WebView(context, attrs, defStyle) {
 
     init {
+        webViewClient = SelfUrlLoadingWebViewClient()
         scrollBarStyle = View.SCROLLBARS_INSIDE_OVERLAY
         settings.loadsImagesAutomatically = true
         settings.javaScriptEnabled = true
