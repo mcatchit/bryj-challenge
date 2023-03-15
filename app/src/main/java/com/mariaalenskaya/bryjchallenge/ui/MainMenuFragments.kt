@@ -1,17 +1,17 @@
 package com.mariaalenskaya.bryjchallenge.ui
 
 class HomeFragment : MainMenuFragment() {
-    override val fragmentUrl: String = "https://www.thebay.com/"
+    override val fragmentWebPageUrl: String = "https://www.thebay.com/"
 }
 
 class ShopFragment : MainMenuFragment() {
-    override val fragmentUrl: String = "https://www.thebay.com/c/men"
+    override val fragmentWebPageUrl: String = "https://www.thebay.com/c/men"
 }
 
 class AccountFragment : MainMenuFragment() {
-    override val fragmentUrl: String = "https://www.thebay.com/account/login"
+    override val fragmentWebPageUrl: String = "https://www.thebay.com/account/login"
 }
 
 class BagFragment : MainMenuFragment() {
-    override val fragmentUrl: String = "https://www.thebay.com/cart"
+    override val fragmentWebPageUrl: String = "https://www.thebay.com/cart"
 }

@@ -6,6 +6,9 @@ import android.util.AttributeSet
 import android.view.View
 import android.webkit.WebView
 
+/**
+ * Custom WebView which supports actions of showing and hiding menu.
+ */
 @SuppressLint("SetJavaScriptEnabled")
 class MenuAwareWebView @JvmOverloads constructor(
     context: Context,
@@ -19,10 +22,16 @@ class MenuAwareWebView @JvmOverloads constructor(
         settings.javaScriptEnabled = true
     }
 
+    /**
+     * Shows menu on current web page.
+     */
     fun showMenu() {
         loadUrl(showMenuFunction)
     }
 
+    /**
+     * Hides menu on current web page.
+     */
     fun hideMenu() {
         loadUrl(hideMenuFunction)
     }

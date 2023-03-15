@@ -7,15 +7,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import com.mariaalenskaya.bryjchallenge.databinding.MainMenuFragmentBinding
 
+/**
+ * Base class for fragments displayed in main menu.
+ * Loads initial [fragmentWebPageUrl] to web view and supports notifications about toolbar menu button clicks.
+ */
 abstract class MainMenuFragment : Fragment(), MenuAwareFragment {
 
-    abstract val fragmentUrl: String
+    /**
+     * Initial web page url.
+     */
+    abstract val fragmentWebPageUrl: String
 
     private var _binding: MainMenuFragmentBinding? = null
 
-    // This property is only valid between onCreateView and
-    // onDestroyView.
-    private val binding get() = _binding!!
+    private val binding
+        get() = _binding
+            ?: error("Binding is only valid between onCreateView and onDestroyView.")
 
     private var isOpen = false
 
@@ -24,12 +31,10 @@ abstract class MainMenuFragment : Fragment(), MenuAwareFragment {
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         _binding = MainMenuFragmentBinding.inflate(inflater, container, false)
         val root: View = binding.root
 
-        val webView = binding.webView
-        webView.loadUrl(fragmentUrl)
+        binding.webView.loadUrl(fragmentWebPageUrl)
 
         return root
     }
